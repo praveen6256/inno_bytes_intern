@@ -1,101 +1,72 @@
-# 📊 Superstore Sales & Profit Dashboard
+SQL for Data Analysis – Task 3
+🔍 Objective
+This project focuses on using SQL to extract, manipulate, and analyze data from a structured eCommerce database. The main goal is to understand and practice SQL operations including filtering, joining, grouping, and aggregating data.
 
-A dynamic Tableau dashboard project built to analyze and visualize key business metrics using the classic **Superstore** dataset. This project showcases the power of data storytelling with visual insights into sales, profit, discount trends, and regional performance.
+🛠 Tools Used
+MySQL Workbench
 
----
+MySQL Server
 
-## 📁 Dataset
+SQL Language
 
-- **Source**: [Tableau Sample - Superstore Dataset](https://community.tableau.com/s/sample-superstore-data)
-- **File**: `Sample - Superstore.csv`
-- **Fields**:  
-  `Order Date`, `Ship Date`, `Sales`, `Profit`, `Quantity`, `Discount`, `Category`, `Sub-Category`, `Region`, `State`, `City`, `Segment`, `Product Name`, `Shipping Mode`
+📦 Dataset Structure
+The project uses a sample eCommerce database with the following tables:
 
----
+customers (customer_id, name, country)
 
-## 🎯 Objective
+products (product_id, name, category, price)
 
-- Analyze overall sales and profit trends
-- Compare performance across categories, sub-categories, and regions
-- Evaluate the impact of discounting on profitability
-- Enable business-driven insights through interactive visuals
+orders (order_id, customer_id, order_date, total_amount)
 
----
+order_items (item_id, order_id, product_id, quantity)
 
-## 🛠️ Tools & Technologies
+✅ SQL Concepts Practiced
+SELECT statements to view and filter data
 
-- **Visualization**: Tableau Public / Tableau Desktop
-- **Design Elements**: Line charts, bar charts, scatter plots, maps, KPI tiles
-- **Delivery**: Interactive dashboard + PDF export
+WHERE clause for conditional queries
 
----
+ORDER BY to sort data
 
-## 📊 Dashboard Features
+JOINs (INNER, LEFT) to combine data across tables
 
-- 🌍 **Regional Performance**  
-  Bar chart showing sales and profit by region
+GROUP BY and aggregate functions (SUM, AVG)
 
-- 📦 **Sub-Category Analysis**  
-  Colored bar chart highlighting best and worst performers
+Subqueries for advanced filtering
 
-- 🏆 **Top 10 Products by Sales**  
-  Bar chart filtered to top-selling products
+Creating and querying VIEWS
 
-- 📉 **Discount vs Profit (Scatter Plot)**  
-  Highlights profitability issues related to high discounting
+Creating INDEXES for query optimization
 
-- ✅ **KPI Tiles**  
-  - Total Sales  
-  - Total Profit  
-  - Avg. Discount  
-  - Total Orders
+📁 Files Included
+ecommerce_analysis.sql — contains all SQL queries used for analysis
 
-- 🎛️ **Interactive Filters**  
-  Region, Category, and Segment for custom views
+Screenshots folder — output screenshots for each query result
 
----
+README.md — this file
 
-## 📌 Key Insights
+🧪 Sample Queries
+Example of JOIN query:
 
-- 🚩 *Tables* sub-category drives high sales but incurs frequent losses  
-- 🌟 *Technology* category yields the highest profit margins  
-- 📉 Higher discounts often correlate with negative profits  
-- 🌍 *California* leads in sales but has below-average profit margins
+sql
+Copy
+Edit
+SELECT o.order_id, c.name, o.total_amount
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id;
+Example of aggregate function:
 
----
+sql
+Copy
+Edit
+SELECT SUM(total_amount) AS total_revenue FROM orders;
+📝 Outcome
+Learned to write optimized SQL queries
 
-## 🧠 Business Recommendations
+Understood the importance of database relationships
 
-- Reduce discounting in loss-making sub-categories
-- Prioritize promotions for high-margin products
-- Optimize pricing strategy in the Furniture category
+Gained experience in analyzing structured data using SQL
 
----
+🙋 Author
+Name: Karthikeyan
 
-## 📤 Deliverables
-
-- 📁 Tableau Dashboard File (`.twbx`)  
-- 🖼️ Screenshot Gallery / Dashboard PDF  
-- 📄 Project Documentation (`README.md`)
-
----
-
-## 📅 Timeline
-
-- **Project Duration**: ~2–3 Days  
-- **Dataset Year Range**: 2014–2017
-
----
-
-## 👤 Author
-
-**[Your Name]**  
-📫 [your.email@example.com]  
-🌐 [your-portfolio-link.com] *(optional)*
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
+Project: Task 3 – CodeSoft SQL Internship Task
