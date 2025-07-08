@@ -1,72 +1,69 @@
-SQL for Data Analysis – Task 3
-🔍 Objective
-This project focuses on using SQL to extract, manipulate, and analyze data from a structured eCommerce database. The main goal is to understand and practice SQL operations including filtering, joining, grouping, and aggregating data.
+# Sales Performance Dashboard – Supermarket Sales Dataset
 
-🛠 Tools Used
-MySQL Workbench
+📊 This project features an interactive dashboard created using Power BI, built to analyze sales performance across branches, products, and customer demographics. It helps business stakeholders identify trends and optimize decision-making.
 
-MySQL Server
+---
 
-SQL Language
+## 📁 Dataset
 
-📦 Dataset Structure
-The project uses a sample eCommerce database with the following tables:
+- Source: Supermarket Sales Dataset (Kaggle)
+- Format: CSV
+- Fields include: Invoice ID, Branch, City, Customer Type, Gender, Product Line, Total, gross income, Rating, Date, Time, Payment
 
-customers (customer_id, name, country)
+---
 
-products (product_id, name, category, price)
+## 🎯 Objective
 
-orders (order_id, customer_id, order_date, total_amount)
+Design a dynamic sales dashboard to help business users:
+- Track Total Sales and Profit
+- Analyze performance across Product Lines and Branches
+- Identify trends over time (monthly sales)
+- Understand customer demographics
 
-order_items (item_id, order_id, product_id, quantity)
+---
 
-✅ SQL Concepts Practiced
-SELECT statements to view and filter data
+## 📈 Key Features
 
-WHERE clause for conditional queries
+✅ KPI Cards
+- Total Sales  
+- Total Profit  
+- Average Customer Rating  
+- Total Transactions  
 
-ORDER BY to sort data
+✅ Visualizations
+- Monthly Sales Trend (Line Chart)
+- Sales by Product Line (Bar Chart)
+- Profit by Branch (Bar Chart)
+- Gender and Customer Type Distribution (Pie/Donut Charts)
 
-JOINs (INNER, LEFT) to combine data across tables
+✅ Interactivity
+- Slicers: Filter by City, Branch, Product Line, and Date Range
 
-GROUP BY and aggregate functions (SUM, AVG)
+✅ Design
+- Clean layout with consistent theme
+- Rounded KPI cards with custom background
+- Data labels and tooltips enabled for clarity
 
-Subqueries for advanced filtering
+---
 
-Creating and querying VIEWS
+## 🧰 Tools Used
 
-Creating INDEXES for query optimization
+- Power BI Desktop
+- DAX (Data Analysis Expressions)
+- Power Query Editor (for preprocessing)
 
-📁 Files Included
-ecommerce_analysis.sql — contains all SQL queries used for analysis
+---
 
-Screenshots folder — output screenshots for each query result
+## 📦 File Structure
 
-README.md — this file
+- /task4.pbix → Main Power BI file  
+- /supermarket_sales.csv → Dataset  
 
-🧪 Sample Queries
-Example of JOIN query:
+---
 
-sql
-Copy
-Edit
-SELECT o.order_id, c.name, o.total_amount
-FROM orders o
-JOIN customers c ON o.customer_id = c.customer_id;
-Example of aggregate function:
+## 📝 Summary
 
-sql
-Copy
-Edit
-SELECT SUM(total_amount) AS total_revenue FROM orders;
-📝 Outcome
-Learned to write optimized SQL queries
+This dashboard allows stakeholders to quickly monitor sales performance and customer behavior with easy-to-use visuals and filters. It was developed as part of a business intelligence task to demonstrate storytelling, interactivity, and visual design using Power BI.
 
-Understood the importance of database relationships
+---
 
-Gained experience in analyzing structured data using SQL
-
-🙋 Author
-Name: Karthikeyan
-
-Project: Task 3 – CodeSoft SQL Internship Task
